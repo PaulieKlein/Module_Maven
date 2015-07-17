@@ -1,14 +1,47 @@
 package dta;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+import org.reflections.Reflections;
+
+import dta.ihm.Action;
+
 public class BankonetClientApp {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException {
 		// TODO Auto-generated method stub
+		Reflections reflections = new Reflections("dta.ihm");
+		Set<Class<? extends Action>> actions =  reflections.getSubTypesOf(Action.class);
 		
-		RestServerInfoHelper helper = new RestServerInfoHelper();
-		System.out.println("Protocol : "+helper.getDtaRestServerInfo().getProtocol());
-		System.out.println("Host : "+helper.getDtaRestServerInfo().getHost());
-		System.out.println("Port : "+helper.getDtaRestServerInfo().getPort());
+		List<Action> list = new ArrayList<Action>();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		 
+		
+		for (Class<? extends Action> classe : actions) {
+			list.add(classe.newInstance());
+			//System.out.println(action.getId()+"."+action.getMenu());
+		}
+		
+		Collections.sort(list,(a1,a2)->a1.getId().compareTo(a2.getId()));
+		
+		while(true) {
+			System.out.println("*****BANKONET! CLIENT*****");
+			for(Action action:list) {
+				System.out.println(action.getId()+"."+action.getMenu());
+			}
+			System.out.println();
+			Integer saisie = sc.nextInt();
+			
+		}
+		
+		
+		
 	}
 
 }
