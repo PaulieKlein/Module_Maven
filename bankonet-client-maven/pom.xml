@@ -1,0 +1,9 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>dta</groupId>
+	<artifactId>bankonet-client-maven</artifactId>
+	<version>1</version>
+	<build>
+		<finalName>banko-client</finalName>
+	</build>
+</project>
