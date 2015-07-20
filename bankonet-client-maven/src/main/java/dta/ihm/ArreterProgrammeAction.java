@@ -9,6 +9,8 @@ public class ArreterProgrammeAction implements Action {
 		return "Arrêter le programme";
 	}
 	public void execute(){
+		System.out.println("Le programme a été arrêté");
 		System.exit(0);
+		
 	}
 }
