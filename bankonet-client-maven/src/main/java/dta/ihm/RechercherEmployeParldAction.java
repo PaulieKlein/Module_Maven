@@ -30,7 +30,7 @@ public class RechercherEmployeParldAction implements Action {
 		JSONObject jsonres = new JSONObject(response.readEntity(String.class));
 		JSONObject adresse = new JSONObject(jsonres.get("adresse").toString());
 		
-		System.out.println("Employé n° " + jsonres.get("id")+" : ");
+		System.out.println("------------------------------Employé n° " + jsonres.get("id")+"------------------------------");
 		System.out.println("| "+"Nom : " + jsonres.get("nom")+" | "+"Prénom : " + jsonres.get("prenom")+" |"
 				+" Adresse : " + adresse.get("numero")+" " + adresse.get("rue")+" "+adresse.get("ville")+" |\n " );
 	}

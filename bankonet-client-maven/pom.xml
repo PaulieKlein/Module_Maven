@@ -4,7 +4,7 @@
 	<artifactId>bankonet-client-maven</artifactId>
 	<version>1</version>
 	<build>
-		<finalName>banko-client</finalName>
+		<finalName>bankonet-console</finalName>
 	</build>
 	<dependencies>
 		<dependency>
@@ -33,6 +33,11 @@
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20141113</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>2.19</version>
 		</dependency>
 	</dependencies>
 	<properties>
