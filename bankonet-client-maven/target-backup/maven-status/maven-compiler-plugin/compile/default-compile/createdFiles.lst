@@ -1,0 +1,10 @@
+dta\model\Employe.class
+dta\model\Adresse.class
+dta\ihm\ListerEmployesAction.class
+dta\ihm\RechercherEmployeParldAction.class
+dta\BankonetClientApp.class
+dta\RestServerInfoHelper.class
+dta\ihm\Action.class
+dta\ihm\ArreterProgrammeAction.class
+dta\dtaRestServerInfo.class
+dta\ihm\CreerEmploye.class
