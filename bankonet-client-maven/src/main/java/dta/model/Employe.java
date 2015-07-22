@@ -1,7 +1,5 @@
 package dta.model;
 
-
-import java.io.Serializable;
 import java.lang.String;
 
 

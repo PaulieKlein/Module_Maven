@@ -33,5 +33,6 @@ public class RechercherEmployeParldAction implements Action {
 		System.out.println("------------------------------Employé n° " + jsonres.get("id")+"------------------------------");
 		System.out.println("| "+"Nom : " + jsonres.get("nom")+" | "+"Prénom : " + jsonres.get("prenom")+" |"
 				+" Adresse : " + adresse.get("numero")+" " + adresse.get("rue")+" "+adresse.get("ville")+" |\n " );
+		sc.close();
 	}
 }

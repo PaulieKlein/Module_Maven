@@ -9,6 +9,7 @@
 	<modules>
 		<module>bankonet-client</module>
 		<module>bankonet-rest</module>
+		<module>bankonet-data</module>
 	</modules>
 
 	<dependencyManagement>

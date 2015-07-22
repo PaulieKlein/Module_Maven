@@ -37,7 +37,7 @@ public class BankonetClientApp {
 			System.out.println("\nChoisir une option");
 			Integer saisie = sc.nextInt();
 			
-			Iterator it = list.iterator();
+			Iterator<Action> it = list.iterator();
 			
 			while(it.hasNext()){
 				Action action = (Action) it.next();
@@ -45,6 +45,7 @@ public class BankonetClientApp {
 					action.execute();
 				}
 			}
+			sc.close();
 		}
 		
 		

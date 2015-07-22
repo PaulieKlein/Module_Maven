@@ -7,9 +7,6 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-
-import org.glassfish.jersey.jackson.JacksonFeature;
 
 import dta.model.Adresse;
 import dta.model.Employe;
@@ -44,8 +41,9 @@ public class CreerEmploye implements Action {
 		javax.ws.rs.client.Client client = ClientBuilder.newClient();
 		WebTarget target = client.target("http://localhost:8090/BankonetREST/api/Employes");
 		Invocation.Builder builder = target.request();
-		Employe emp = builder.post(Entity.entity(employe, MediaType.APPLICATION_JSON),
+		builder.post(Entity.entity(employe, MediaType.APPLICATION_JSON),
 				Employe.class);
+		sc.close();
 	}
 
 }
